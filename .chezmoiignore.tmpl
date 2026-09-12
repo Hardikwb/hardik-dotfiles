@@ -18,3 +18,11 @@ dot_claude/cache/
 dot_codex/sessions/
 dot_pi/agent/sessions/
 dot_pi/agent/npm/
+# Repository-only files. Never copy these into the home directory.
+README.md
+docs/
+scripts/
+{{- if eq .chezmoi.os "windows" }}
+.bashrc
+.zshrc
+{{- end }}
