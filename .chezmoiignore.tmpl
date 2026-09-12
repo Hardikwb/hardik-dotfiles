@@ -1,0 +1,20 @@
+# Platform-specific target files and scripts.
+{{- if eq .chezmoi.os "windows" }}
+# Linux-only shell/profile material is intentionally ignored on Windows.
+dot_bashrc.tmpl
+dot_zshrc.tmpl
+run_onchange_after_20-linux-install-tools.sh
+{{- else }}
+# Windows-only material is intentionally ignored on Linux/WSL.
+AppData/
+Documents/
+run_onchange_after_10-windows-install-tools.ps1.tmpl
+run_onchange_after_20-windows-configure-cmd.ps1.tmpl
+{{- end }}
+
+# Never manage runtime state / caches from coding agents.
+dot_claude/projects/
+dot_claude/cache/
+dot_codex/sessions/
+dot_pi/agent/sessions/
+dot_pi/agent/npm/

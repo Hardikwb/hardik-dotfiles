@@ -1,0 +1,19 @@
+# Managed by chezmoi.
+
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
+
+# Common aliases inspired by the reference agentic-engineering setup.
+alias ..='cd ..'
+alias add='git add .'
+alias push='git push'
+alias pull='git pull'
+alias g='git status --short --branch'
+
+# Enable these high-agency shortcuts only after reviewing what they do:
+# alias cc='claude --dangerously-skip-permissions'
+# alias co='codex --full-auto'

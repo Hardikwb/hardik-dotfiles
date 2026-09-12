@@ -1,0 +1,14 @@
+# Managed by chezmoi.
+
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
+
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init bash)"
+fi
+
+alias ..='cd ..'
+alias add='git add .'
+alias push='git push'
+alias pull='git pull'
+alias g='git status --short --branch'
